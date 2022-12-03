@@ -9,12 +9,10 @@
 include:
   - shield: cradio_left
     board: nice_nano_v2
-    keymap: config/z34.keymap
   - shield: cradio_right
     board: nice_nano_v2
-    keymap: config/z34.keymap
   - shield: reviung34
     board: nice_nano_v2
-    keymap: config/z34.keymap
+    # keymap: config/layout-34.keymap
 #   - board: nice_nano_v2
 #     shield: settings_reset

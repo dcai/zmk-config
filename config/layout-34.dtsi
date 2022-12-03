@@ -1,0 +1,139 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+&mt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <190>;
+};
+
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <190>;
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        label = "dcai's 34 keys keymap";
+
+        base {
+            bindings = <
+//+-----------+---------+-----------+------------+-----------+/**/+-----------+------------+-----------+--------+---------------+
+   &lt 3 Q     &kp W     &kp E       &kp R        &kp T       /**/ &kp Y       &kp U        &kp I       &kp O    &lt 3 P
+//+-----------+---------+-----------+------------+-----------+/**/+-----------+------------+-----------+--------+---------------+
+   &ht LCTRL A &lt 2 S   &ht LGUI D  &ht LSHFT F  &ht LALT G  /**/ &ht RALT H  &ht RSHFT J  &ht RGUI K  &lt 2 L  &ht RCTRL SEMI
+//+-----------+---------+-----------+------------+-----------+/**/+-----------+------------+-----------+--------+---------------+
+   &kp Z       &kp X     &kp C       &kp V        &kp B       /**/ &kp N       &kp M        &kp COMMA   &kp DOT  &kp SLASH
+//+-----------+---------+-----------+------------+-----------+/**/+-----------+------------+-----------+--------+---------------+
+                                     &ht LGUI RET &lt 2 SPACE /**/ &lt 1 BSPC  &ht LALT TAB
+                                   //+-----------+-----------+/**/+-----------+------------+
+            >;
+        };
+
+        symbols {
+            bindings = <
+//+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
+   &kp EXCL  &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  /**/ &kp CARET  &kp AMPS   &kp STAR &none    &none
+//+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
+   &kp MINUS &kp UNDER &kp GRAVE  &kp SQT   &kp DQT    /**/ &kp COLON  &kp LPAR   &kp RPAR &kp LBKT &kp RBRC
+//+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
+   &kp BSLH  &kp PIPE  &kp TILDE  &kp EQUAL &kp PLUS   /**/ &kp LBKT   &kp RBKT   &kp LT   &kp GT   &kp QMARK
+//+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
+                                  &kp RET   &kp SPACE  /**/ &kp BSPC   &kp TAB
+                               //+---------+----------+/**/+----------+----------+
+            >;
+        };
+
+        numbers {
+            bindings = <
+//+-------+-------+-------+----------+----------+/**/+---------+---------+--------+----------+-------+
+   &kp N1  &kp N2  &kp N3  &kp MINUS  &kp STAR   /**/ &none     &none     &none     &none     &none
+//+-------+-------+-------+----------+----------+/**/+---------+---------+--------+----------+-------+
+   &kp N4  &kp N5  &kp N6  &kp PLUS   &kp SLASH  /**/ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+//+-------+-------+-------+----------+----------+/**/+---------+---------+--------+----------+-------+
+   &kp N7  &kp N8  &kp N9  &kp N0     &kp DOT    /**/ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
+//+-------+-------+-------+----------+----------+/**/+---------+---------+--------+----------+-------+
+                           &kp RET    &kp SPACE  /**/ &kp BSPC  &kp TAB
+                        //+----------+----------+/**/+---------+---------+
+            >;
+        };
+
+        config {
+            bindings = <
+//+--------+-------+------------+-------------+--------------+/**/+--------+-------+-------+-------+------------+
+   &none    &none   &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_SEL 2  /**/ &none    &none   &none   &none   &none
+//+--------+-------+------------+-------------+--------------+/**/+--------+-------+-------+-------+------------+
+   &kp CAPS &none   &none         &none         &none         /**/ &none    &none   &none   &none   &none
+//+--------+-------+------------+-------------+--------------+/**/+--------+-------+-------+-------+------------+
+   &none    &none   &none         &none         &none         /**/ &none    &none   &none   &reset  &bootloader
+//+--------+-------+------------+-------------+--------------+/**/+--------+-------+-------+-------+------------+
+                                  &kp RET       &kp SPACE     /**/ &kp BSPC &kp TAB
+                               //+------------+--------------+/**/+--------+-------+
+            >;
+        };
+    };
+
+    behaviors {
+        mylt: layer_tap {
+            label = "LAYER_TAP";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <190>;
+            bindings = <&mo>, <&kp>;
+            // global-quick-tap;
+        };
+        ht: hold_tap {
+            label = "TAP_HOLD";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <190>;
+            bindings = <&kp>, <&kp>;
+            // global-quick-tap;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_vol_down {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <28 27>;
+        };
+
+        combo_vol_up {
+            bindings = <&kp C_VOL_UP>;
+            key-positions = <29 28>;
+        };
+
+        combo_bspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <3 4>;
+        };
+    };
+
+    macros {
+        chrome_profile: chrome_profile {
+            compatible = "zmk,behavior-macro";
+            label = "app";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+        };
+    };
+};
