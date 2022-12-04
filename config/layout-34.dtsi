@@ -48,9 +48,9 @@
 //+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
    &kp EXCL  &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  /**/ &kp CARET  &kp AMPS   &kp STAR &none    &none
 //+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
-   &kp MINUS &kp UNDER &kp GRAVE  &kp SQT   &kp DQT    /**/ &kp COLON  &kp LPAR   &kp RPAR &kp LBKT &kp RBRC
+   &kp MINUS &kp UNDER &kp GRAVE  &kp SQT   &kp DQT    /**/ &kp COLON  &kp LPAR   &kp RPAR &kp LBKT &kp RBKT
 //+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
-   &kp BSLH  &kp PIPE  &kp TILDE  &kp EQUAL &kp PLUS   /**/ &kp LBKT   &kp RBKT   &kp LT   &kp GT   &kp QMARK
+   &kp BSLH  &kp PIPE  &kp TILDE  &kp EQUAL &kp PLUS   /**/ &kp LBRC   &kp RBRC   &kp LT   &kp GT   &kp QMARK
 //+---------+---------+----------+---------+----------+/**/+----------+----------+--------+--------+----------+
                                   &kp RET   &kp SPACE  /**/ &kp BSPC   &kp TAB
                                //+---------+----------+/**/+----------+----------+
