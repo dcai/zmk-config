@@ -125,12 +125,12 @@
 
         combo_vol_down {
             bindings = <&kp C_VOL_DN>;
-            key-positions = <5 6>;
+            key-positions = <26 27>;
         };
 
         combo_vol_up {
             bindings = <&kp C_VOL_UP>;
-            key-positions = <6 7>;
+            key-positions = <27 28>;
         };
     };
 
