@@ -1,4 +1,14 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "config/**"
+      - ".github/**"
+      - "build.yaml"
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
