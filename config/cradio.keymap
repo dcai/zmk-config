@@ -36,8 +36,7 @@
             label = "TAP_HOLD";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            /* flavor = "balanced"; */
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
