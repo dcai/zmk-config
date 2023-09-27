@@ -146,7 +146,7 @@
         };
 
         combo_caps_word {
-            bindings = <&kp CAPS>;
+            bindings = <&caps_word>;
             key-positions = <13 16>;
         };
     };
