@@ -45,7 +45,7 @@
           label = "BASE";
           bindings = <
             // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-                 &LT1(LEFT)    &kp DOWN       &kp UP         &kp RIGHT      &kp C_MUTE
+                 LT1(LEFT)     &kp DOWN       &kp UP         &kp RIGHT      &kp C_MUTE
             // ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
           >;
           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
