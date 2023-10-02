@@ -4,9 +4,7 @@ on:
       - master
       - main
     paths:
-      - "**reviung5.yaml"
-      - "**reviung5.yml"
-      - "**reviung5.conf"
+      - "**reviung5.*"
   pull_request:
   workflow_dispatch:
 
