@@ -4,9 +4,9 @@ on:
       - master
       - main
     paths:
-      - "config/**"
-      - ".github/**"
-      - "build_matrix/sweep.yaml"
+      - "**sweep.yaml"
+      - "**cradio.yaml"
+      - "**cradio.conf"
   pull_request:
   workflow_dispatch:
 

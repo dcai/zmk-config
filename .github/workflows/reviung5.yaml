@@ -4,9 +4,9 @@ on:
       - master
       - main
     paths:
-      - "config/**"
-      - ".github/**"
-      - "build_matrix/reviung5.yaml"
+      - "**reviung5.yaml"
+      - "**reviung5.yml"
+      - "**reviung5.conf"
   pull_request:
   workflow_dispatch:
 

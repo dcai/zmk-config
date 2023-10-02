@@ -4,9 +4,7 @@ on:
       - master
       - main
     paths:
-      - "config/**"
-      - ".github/**"
-      - "build/sweep.yaml"
+      - "**reset.yaml"
   pull_request:
   workflow_dispatch:
 
