@@ -6,10 +6,14 @@ on:
     paths:
       - "config/**"
       - ".github/**"
-      - "build.yaml"
+      - "build_matrix/reviung5.yaml"
   pull_request:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_sweep:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    secrets: inherit
+    with:
+      build_matrix_path: "build_matrix/reviung5.yaml"
+      archive_name: "zmk_reviung5"

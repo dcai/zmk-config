@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "config/**"
+      - ".github/**"
+      - "build_matrix/sweep.yaml"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_sweep:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    secrets: inherit
+    with:
+      build_matrix_path: "build_matrix/sweep.yaml"
+      archive_name: "zmk_sweep"

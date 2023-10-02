@@ -4,7 +4,7 @@ board:
 shield:
   - cradio_left
   - cradio_right
-  - settings_reset
+  # - settings_reset
   # - reviung34
 
 # include:
