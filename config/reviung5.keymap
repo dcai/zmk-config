@@ -12,27 +12,52 @@
 #define BASE 0
 #define BLE 1
 
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <180>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <180>;
+};
+
+#define LT1(k1) &lt 1 k1
+
 / {
-        keymap {
-            compatible = "zmk,keymap";
-
-            base_layer {
-              label = "BASE";
-              bindings = <
-                // ╭─────────────┬──────────────┬──────────────────┬─────────────┬─────────────╮
-                     &mo BLE      &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT   &kp C_MUTE
-                // ╰─────────────┴──────────────┴──────────────────┴─────────────┴─────────────╯
-              >;
-              sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            };
-
-            ble_layer {
-              label = "BLE";
-              bindings = <
-                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                     &trans     &out OUT_TOG   &bt BT_PRV    &bt BT_NXT    &bt BT_CLR
-                // ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
-              >;
-            };
+    behaviors {
+        ht: hold_tap {
+            label = "TAP_HOLD";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+            bindings = <&kp>, <&kp>;
         };
+    };
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+          label = "BASE";
+          bindings = <
+            // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+                 &LT1(LEFT)    &kp DOWN       &kp UP         &kp RIGHT      &kp C_MUTE
+            // ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+          >;
+          sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        ble_layer {
+          label = "BLE";
+          bindings = <
+            // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+                 &trans        &out OUT_TOG   &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
+            // ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+          >;
+        };
+    };
 };
