@@ -1,3 +1,5 @@
+name: Sweep
+
 on:
   push:
     branches:

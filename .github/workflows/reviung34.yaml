@@ -1,0 +1,20 @@
+name: Reviung34
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "**reviung34.*"
+  pull_request:
+  workflow_dispatch:
+
+# !!! not yet implemented in zmk officals yet
+# jobs:
+#   build_sweep:
+#     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+#     secrets: inherit
+#     with:
+#       build_matrix_path: "build_matrix/reviung34.yaml"
+#       archive_name: "zmk_reviung34"

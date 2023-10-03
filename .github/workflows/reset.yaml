@@ -1,3 +1,5 @@
+name: reset settings
+
 on:
   push:
     branches:
