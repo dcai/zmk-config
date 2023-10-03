@@ -2,4 +2,5 @@
 board:
   - nice_nano_v2
 shield:
-  - reviung5
+  - shield: reviung34
+    keymap: config/reviung34.keymap
