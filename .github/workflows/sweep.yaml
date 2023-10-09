@@ -18,4 +18,4 @@ jobs:
     secrets: inherit
     with:
       build_matrix_path: "build_matrix/sweep.yaml"
-      archive_name: "zmk_sweep"
+      archive_name: "zmk_sweep-${{ github.run_number }}"
