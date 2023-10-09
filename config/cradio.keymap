@@ -42,7 +42,7 @@
 #define RAT(k1) &ht RALT k1
 
 // GUI tap and hold
-#define LGT(k1) &ht LGUI k1
+#define LGT(k1) &hp LGUI k1
 #define RGT(k1) &ht RGUI k1
 
 #define BT(k1)  &bt BT_SEL k1
@@ -50,8 +50,20 @@
 // GUI + x key press
 #define KG(k1) &kp LG(k1)
 
+// hold-prefered: trigger hold when other key is pressed
+//      balanced: trigger hold when other key is pressed and released
+
 / {
     behaviors {
+        hp: hold_preferred {
+            label = "HOLD PREFERRED";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+            bindings = <&kp>, <&kp>;
+        };
         ht: hold_tap {
             label = "TAP_HOLD";
             compatible = "zmk,behavior-hold-tap";
