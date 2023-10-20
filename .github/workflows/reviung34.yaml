@@ -10,11 +10,10 @@ on:
   pull_request:
   workflow_dispatch:
 
-# !!! not yet implemented in zmk officals yet
-# jobs:
-#   build_sweep:
-#     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-#     secrets: inherit
-#     with:
-#       build_matrix_path: "build_matrix/reviung34.yaml"
-#       archive_name: "zmk_reviung34"
+jobs:
+  build_reviung34:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    secrets: inherit
+    with:
+      build_matrix_path: "build_matrix/reviung34.yaml"
+      archive_name: "zmk_reviung34-${{ github.run_number }}"
