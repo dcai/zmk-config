@@ -4,16 +4,3 @@ board:
 shield:
   - cradio_left
   - cradio_right
-  # - settings_reset
-  # - reviung34
-
-# include:
-#   - board: nice_nano_v2
-#     shield: cradio_left
-#   - board: nice_nano_v2
-#     shield: cradio_right
-#   # - shield: reviung34
-#   #   board: nice_nano_v2
-#   #   keymap: config/layout-34.keymap
-#   # - board: nice_nano_v2
-#   #   shield: settings_reset
