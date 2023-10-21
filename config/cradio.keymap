@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/backlight.h>
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
@@ -131,11 +133,11 @@
         config {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &none      &kp UP   &none     &none     BT(0)     /*  */ &none     &none     &none     &none     &none
+   &none      &kp UP   &none     &none     BT(0)     /*  */ &none     &none     &none     &none     &bl BL_TOG
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp LEFT   &kp DOWN &kp RIGHT &none     BT(1)     /*  */ &none     &none     &none     &none     &none
+   &kp LEFT   &kp DOWN &kp RIGHT &none     BT(1)     /*  */ &none     &none     &none     &none     &rgb_ug RGB_TOG
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &none      &none    &none     &none     BT(2)     /*  */ &none     &none     &none     &none     &none
+   &none      &none    &none     &none     BT(2)     /*  */ &none     &none     &none     &none     &rgb_ug RGB_EFF
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
                                  &to 0     &trans    /*  */ &trans    &trans
                               //================================================
