@@ -127,6 +127,12 @@
         };
     };
 
+//############################################################################################################
+// ### Reasoning:
+//  * Having enter on left side to hit action when right hand operate mouse
+//  * Alt not on home row to avoid being triggered
+//############################################################################################################
+
     keymap {
         compatible = "zmk,keymap";
         label = "3x5 keymap";
