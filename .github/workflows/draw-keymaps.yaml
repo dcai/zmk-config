@@ -1,0 +1,30 @@
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch: # can be triggered manually
+  push: # automatically run on changes to following paths
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+      - "config/boards/*/*/*.keymap"
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - name: Build keymap image
+        run: |
+          pipx install keymap-drawer
+          keymap parse -z config/cradio.keymap > cradio.yaml
+          keymap draw cradio.yaml > cradio-keymap.svg
+        shell: bash
+
+      - name: Commit updated images
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "*.svg"
+          commit_message: "ci(keymap): draw keymap in svg"
+    permissions:
+      contents: write

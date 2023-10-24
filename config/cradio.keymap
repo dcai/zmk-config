@@ -128,9 +128,7 @@
     };
 
 //############################################################################################################
-// ### Reasoning:
-//  * Having enter on left side to hit action when right hand operate mouse
-//  * Alt not on home row to avoid being triggered
+// * Having enter on left side to hit action when right hand operate mouse
 //############################################################################################################
 
     keymap {
