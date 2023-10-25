@@ -68,7 +68,10 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-
+        combo_sticky_gui {
+            bindings = <&sk LGUI>;
+            key-positions = <01 02>;
+        };
         combo_bspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <3 4>;
@@ -88,21 +91,13 @@
             bindings = <&caps_word>;
             key-positions = <13 16>;
         };
-        combo_sticky_ctrl {
-            bindings = <&sk LCTRL>;
-            key-positions = <22 21>;
-        };
-        combo_sticky_alt {
-            bindings = <&sk LALT>;
-            key-positions = <23 22>;
-        };
-        combo_sticky_cs {
+        combo_sticky_ctrl_shift {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <10 20>;
         };
         combo_layer_3 {
             bindings = <&to 3>;
-            key-positions = <23 24>;
+            key-positions = <00 09>;
         };
     };
 
