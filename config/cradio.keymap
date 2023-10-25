@@ -1,8 +1,9 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/backlight.h>
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
@@ -40,7 +41,9 @@
 // GUI + x key press
 #define KG(k1) &kp LG(k1)
 
-#define BT(k1)  &bt BT_SEL k1
+#define BT(k1) &bt BT_SEL k1
+
+#define RGB(k1) &rgb_ug k1
 
 //               == layout and key index ==
 // +----+----+----+----+----+---+----+----+----+----+----+
@@ -179,14 +182,14 @@
 
         config {
             bindings = <
-//+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------------+---------------+
-   &none      &kp UP   &none     &none     BT(0)     /*  */ &none     &none     &none     &rgb_ug RGB_EFF &rgb_ug RGB_TOG
-//+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------------+---------------+
-   &kp LEFT   &kp DOWN &kp RIGHT &none     BT(1)     /*  */ &none     &none     &none     &none           &rgb_ug RGB_BRI
-//+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------------+---------------+
-   &none      &none    &none     &none     BT(2)     /*  */ &none     &none     &none     &none           &rgb_ug RGB_BRD
-//+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------------+---------------+
-                                 &to 0     &trans    /*  */ &trans    &trans
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
+   &none      &kp UP   &none     &none  BT(0)  /*  */ &none        &none     &none     RGB(RGB_EFF)  RGB(RGB_TOG)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
+   &kp LEFT   &kp DOWN &kp RIGHT &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none         RGB(RGB_BRI)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
+   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &out OUT_BLE  RGB(RGB_BRD)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
+                                 &to 0  &trans /*  */ &trans       &trans
                               //================================================
             >;
         };
