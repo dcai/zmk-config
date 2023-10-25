@@ -1,4 +1,4 @@
-all:
+draw:
 	echo "Build keymap picture"
 	keymap parse  -z config/cradio.keymap > sweep.yaml
 	keymap draw sweep.yaml >./3x5-keymap.svg
@@ -7,3 +7,6 @@ all:
 install-keymap:
 	virtualenv venv
 	pip3 install keymap-drawer --upgrade
+
+pipx-keymap:
+	pipx install keymap-drawer

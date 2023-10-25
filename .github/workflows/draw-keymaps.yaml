@@ -18,9 +18,8 @@ jobs:
       - name: Build keymap image
         shell: bash
         run: |
-          pipx install keymap-drawer
-          keymap parse -z config/cradio.keymap > cradio.yaml
-          keymap draw cradio.yaml > 3x5-keymap.svg
+          make pipx-keymap
+          make draw
 
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v4
