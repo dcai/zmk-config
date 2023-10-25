@@ -24,9 +24,12 @@
     quick-tap-ms = <180>;
 };
 
+
 // Home row mods macro
 #define HRML(k1,k2,k3,k4,k5) &ht LCTRL k1 &lt 2     k2  &ht LGUI k3  &ht LSHFT k4 &kp       k5
 #define HRMR(k1,k2,k3,k4,k5) &kp       k1 &ht RSHFT k2  &ht RGUI k3  &lt 2     k4 &ht RCTRL k5
+
+#define RGB(k1) &rgb_ug k1
 #define LT1(k1) &lt 1 k1
 #define LT2(k1) &lt 2 k1
 #define LT3(k1) &lt 3 k1
@@ -35,15 +38,16 @@
 #define LAT(k1) &ht LALT k1
 #define RAT(k1) &ht RALT k1
 
-// GUI tap and hold
-#define LGT(k1) &hp LGUI k1
+// GUI when hold, k1 when tap
+#define LGT(k1) &ht LGUI k1
 #define RGT(k1) &ht RGUI k1
-// GUI + x key press
-#define KG(k1) &kp LG(k1)
+// hold preferred makes it easier to trigger hold
+#define HOLD_PREFER_GUI(k1) &hp LGUI k1
+
+// Hold GUI + x key press
+#define HG(k1) &kp LG(k1)
 
 #define BT(k1) &bt BT_SEL k1
-
-#define RGB(k1) &rgb_ug k1
 
 //               == layout and key index ==
 // +----+----+----+----+----+---+----+----+----+----+----+
@@ -147,8 +151,8 @@
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
     LT3(Z)   &kp X     &kp C     &kp V     &kp B     /*  */ &kp  N    &kp M     &kp COMMA &kp DOT   LT3(FSLH)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-                                 LGT(RET)  LT2(SPACE)/*  */ LT1(BSPC) RGT(TAB)
-                              //================================================
+                     HOLD_PREFER_GUI(RET)  LT2(SPACE)/*  */ LT1(BSPC) RGT(TAB)
+                   //========================================================================
             >;
         };
 
@@ -173,7 +177,7 @@
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    &kp N4    &kp N5    &kp N6    &kp PLUS  &kp SLASH /*  */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N7    &kp N8    &kp N9    &kp N0    &kp DOT   /*  */ &none     KG(DOWN)  KG(UP)    &none     &none
+   &kp N7    &kp N8    &kp N9    &kp N0    &kp DOT   /*  */ &none     HG(DOWN)  HG(UP)    &none     &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
                                  &trans    &trans    /*  */ &trans    &trans
                               //================================================
@@ -187,7 +191,7 @@
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
    &kp LEFT   &kp DOWN &kp RIGHT &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none         RGB(RGB_BRI)
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
-   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &out OUT_BLE  RGB(RGB_BRD)
+   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &none         RGB(RGB_BRD)
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
                                  &to 0  &trans /*  */ &trans       &trans
                               //================================================
