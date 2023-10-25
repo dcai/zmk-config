@@ -260,45 +260,42 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
+<text x="112" y="37" class="combo tap">LGUI</text>
+<text x="112" y="48" class="combo hold">sticky</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
 <text x="224" y="48" class="combo tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="490" y="135" width="28" height="26" class="combo"/>
 <text x="504" y="148" class="combo tap">
 <tspan x="504" dy="-0.6em">VOL</tspan><tspan x="504" dy="1.2em">DN</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="136" width="28" height="26" class="combo"/>
 <text x="560" y="149" class="combo tap">
 <tspan x="560" dy="-0.6em">VOL</tspan><tspan x="560" dy="1.2em">UP</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <path d="M336,100 l-121,0" class="combo"/>
 <path d="M336,100 l121,0" class="combo"/>
 <rect rx="6" ry="6" x="322" y="87" width="28" height="26" class="combo"/>
 <text x="336" y="100" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="98" y="136" width="28" height="26" class="combo"/>
-<text x="112" y="149" class="combo tap">LCTRL</text>
-<text x="112" y="160" class="combo hold">sticky</text>
-</g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="154" y="135" width="28" height="26" class="combo"/>
-<text x="168" y="148" class="combo tap">LALT</text>
-<text x="168" y="159" class="combo hold">sticky</text>
-</g>
-<g class="combo combopos-7">
 <rect rx="6" ry="6" x="14" y="151" width="28" height="26" class="combo"/>
 <text x="28" y="164" class="combo tap"><tspan style="font-size: 78%">LC(LSHFT)</tspan></text>
 <text x="28" y="175" class="combo hold">sticky</text>
 </g>
-<g class="combo combopos-8">
-<rect rx="6" ry="6" x="210" y="147" width="28" height="26" class="combo"/>
-<text x="224" y="160" class="combo tap">config</text>
+<g class="combo combopos-7">
+<path d="M336,80 l-289,0" class="combo"/>
+<path d="M336,80 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="322" y="67" width="28" height="26" class="combo"/>
+<text x="336" y="80" class="combo tap">config</text>
 </g>
 </g>
 </g>
@@ -443,45 +440,42 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
+<text x="112" y="37" class="combo tap">LGUI</text>
+<text x="112" y="48" class="combo hold">sticky</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
 <text x="224" y="48" class="combo tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="490" y="135" width="28" height="26" class="combo"/>
 <text x="504" y="148" class="combo tap">
 <tspan x="504" dy="-0.6em">VOL</tspan><tspan x="504" dy="1.2em">DN</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="136" width="28" height="26" class="combo"/>
 <text x="560" y="149" class="combo tap">
 <tspan x="560" dy="-0.6em">VOL</tspan><tspan x="560" dy="1.2em">UP</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <path d="M336,100 l-121,0" class="combo"/>
 <path d="M336,100 l121,0" class="combo"/>
 <rect rx="6" ry="6" x="322" y="87" width="28" height="26" class="combo"/>
 <text x="336" y="100" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="98" y="136" width="28" height="26" class="combo"/>
-<text x="112" y="149" class="combo tap">LCTRL</text>
-<text x="112" y="160" class="combo hold">sticky</text>
-</g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="154" y="135" width="28" height="26" class="combo"/>
-<text x="168" y="148" class="combo tap">LALT</text>
-<text x="168" y="159" class="combo hold">sticky</text>
-</g>
-<g class="combo combopos-7">
 <rect rx="6" ry="6" x="14" y="151" width="28" height="26" class="combo"/>
 <text x="28" y="164" class="combo tap"><tspan style="font-size: 78%">LC(LSHFT)</tspan></text>
 <text x="28" y="175" class="combo hold">sticky</text>
 </g>
-<g class="combo combopos-8">
-<rect rx="6" ry="6" x="210" y="147" width="28" height="26" class="combo"/>
-<text x="224" y="160" class="combo tap">config</text>
+<g class="combo combopos-7">
+<path d="M336,80 l-289,0" class="combo"/>
+<path d="M336,80 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="322" y="67" width="28" height="26" class="combo"/>
+<text x="336" y="80" class="combo tap">config</text>
 </g>
 </g>
 </g>
@@ -628,45 +622,42 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
+<text x="112" y="37" class="combo tap">LGUI</text>
+<text x="112" y="48" class="combo hold">sticky</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
 <text x="224" y="48" class="combo tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="490" y="135" width="28" height="26" class="combo"/>
 <text x="504" y="148" class="combo tap">
 <tspan x="504" dy="-0.6em">VOL</tspan><tspan x="504" dy="1.2em">DN</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="136" width="28" height="26" class="combo"/>
 <text x="560" y="149" class="combo tap">
 <tspan x="560" dy="-0.6em">VOL</tspan><tspan x="560" dy="1.2em">UP</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <path d="M336,100 l-121,0" class="combo"/>
 <path d="M336,100 l121,0" class="combo"/>
 <rect rx="6" ry="6" x="322" y="87" width="28" height="26" class="combo"/>
 <text x="336" y="100" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="98" y="136" width="28" height="26" class="combo"/>
-<text x="112" y="149" class="combo tap">LCTRL</text>
-<text x="112" y="160" class="combo hold">sticky</text>
-</g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="154" y="135" width="28" height="26" class="combo"/>
-<text x="168" y="148" class="combo tap">LALT</text>
-<text x="168" y="159" class="combo hold">sticky</text>
-</g>
-<g class="combo combopos-7">
 <rect rx="6" ry="6" x="14" y="151" width="28" height="26" class="combo"/>
 <text x="28" y="164" class="combo tap"><tspan style="font-size: 78%">LC(LSHFT)</tspan></text>
 <text x="28" y="175" class="combo hold">sticky</text>
 </g>
-<g class="combo combopos-8">
-<rect rx="6" ry="6" x="210" y="147" width="28" height="26" class="combo"/>
-<text x="224" y="160" class="combo tap">config</text>
+<g class="combo combopos-7">
+<path d="M336,80 l-289,0" class="combo"/>
+<path d="M336,80 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="322" y="67" width="28" height="26" class="combo"/>
+<text x="336" y="80" class="combo tap">config</text>
 </g>
 </g>
 </g>
@@ -812,45 +803,42 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
+<text x="112" y="37" class="combo tap">LGUI</text>
+<text x="112" y="48" class="combo hold">sticky</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
 <text x="224" y="48" class="combo tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="490" y="135" width="28" height="26" class="combo"/>
 <text x="504" y="148" class="combo tap">
 <tspan x="504" dy="-0.6em">VOL</tspan><tspan x="504" dy="1.2em">DN</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="136" width="28" height="26" class="combo"/>
 <text x="560" y="149" class="combo tap">
 <tspan x="560" dy="-0.6em">VOL</tspan><tspan x="560" dy="1.2em">UP</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <path d="M336,100 l-121,0" class="combo"/>
 <path d="M336,100 l121,0" class="combo"/>
 <rect rx="6" ry="6" x="322" y="87" width="28" height="26" class="combo"/>
 <text x="336" y="100" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="98" y="136" width="28" height="26" class="combo"/>
-<text x="112" y="149" class="combo tap">LCTRL</text>
-<text x="112" y="160" class="combo hold">sticky</text>
-</g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="154" y="135" width="28" height="26" class="combo"/>
-<text x="168" y="148" class="combo tap">LALT</text>
-<text x="168" y="159" class="combo hold">sticky</text>
-</g>
-<g class="combo combopos-7">
 <rect rx="6" ry="6" x="14" y="151" width="28" height="26" class="combo"/>
 <text x="28" y="164" class="combo tap"><tspan style="font-size: 78%">LC(LSHFT)</tspan></text>
 <text x="28" y="175" class="combo hold">sticky</text>
 </g>
-<g class="combo combopos-8">
-<rect rx="6" ry="6" x="210" y="147" width="28" height="26" class="combo"/>
-<text x="224" y="160" class="combo tap">config</text>
+<g class="combo combopos-7">
+<path d="M336,80 l-289,0" class="combo"/>
+<path d="M336,80 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="322" y="67" width="28" height="26" class="combo"/>
+<text x="336" y="80" class="combo tap">config</text>
 </g>
 </g>
 </g>
