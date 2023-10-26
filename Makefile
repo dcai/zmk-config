@@ -12,3 +12,7 @@ pipx-keymap:
 draw-reviung34:
 	keymap parse -z config/reviung34.keymap > ./assets/reviung34-keymap.yaml
 	keymap draw ./assets/reviung34-keymap.yaml >./assets/reviung34-keymap.svg
+
+draw-reviung5:
+	keymap parse -z config/reviung5.keymap > ./assets/reviung5-keymap.yaml
+	keymap draw ./assets/reviung5-keymap.yaml >./assets/reviung5-keymap.svg
