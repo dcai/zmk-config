@@ -1,0 +1,14 @@
+layout: {qmk_keyboard: reviung/reviung5}
+layers:
+  BASE:
+  - {t: LEFT, h: BLE}
+  - DOWN
+  - UP
+  - RIGHT
+  - MUTE
+  BLE:
+  - {type: held}
+  - OUT TOG
+  - BT PRV
+  - BT NXT
+  - BT CLR
