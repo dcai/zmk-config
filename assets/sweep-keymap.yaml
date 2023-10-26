@@ -1,0 +1,159 @@
+layout: {qmk_keyboard: ferris/sweep}
+layers:
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - {t: T, h: LALT}
+  - {t: Y, h: LALT}
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: numbers}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: numbers}
+  - {t: ;, h: RCTRL}
+  - {t: Z, h: config}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: config}
+  - {t: RET, h: LGUI}
+  - {t: SPACE, h: numbers}
+  - {t: BSPC, h: symbols}
+  - {t: TAB, h: RGUI}
+  symbols:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - ''
+  - ''
+  - '-'
+  - _
+  - '`'
+  - ''''
+  - '"'
+  - ':'
+  - (
+  - )
+  - '['
+  - ']'
+  - \
+  - '|'
+  - '~'
+  - '='
+  - +
+  - '{'
+  - '}'
+  - <
+  - '>'
+  - '?'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  numbers:
+  - '1'
+  - '2'
+  - '3'
+  - '-'
+  - '*'
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - ''
+  - '4'
+  - {t: '5', type: held}
+  - '6'
+  - +
+  - /
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - .
+  - ''
+  - LG(DOWN)
+  - LG(UP)
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  config:
+  - ''
+  - UP
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - ''
+  - ''
+  - ''
+  - RGB EFF
+  - RGB TOG
+  - LEFT
+  - DOWN
+  - RIGHT
+  - ''
+  - {t: BT, h: '1'}
+  - OUT USB
+  - ''
+  - ''
+  - ''
+  - RGB BRI
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - OUT BLE
+  - ''
+  - ''
+  - ''
+  - RGB BRD
+  - base
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+- p: [1, 2]
+  k: {t: LGUI, h: sticky}
+- p: [3, 4]
+  k: BACKSPACE
+- p: [26, 27]
+  k: VOL DN
+- p: [27, 28]
+  k: VOL UP
+- p: [13, 16]
+  k: '&caps_word'
+- p: [10, 20]
+  k: {t: LC(LSHFT), h: sticky}
+- p: [0, 9]
+  k: config
