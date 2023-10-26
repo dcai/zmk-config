@@ -1,8 +1,6 @@
-draw:
-	echo "Build keymap picture"
-	keymap parse  -z config/cradio.keymap > sweep.yaml
-	keymap draw sweep.yaml >./3x5-keymap.svg
-	rm sweep.yaml
+draw-sweep:
+	keymap parse -z config/cradio.keymap > ./assets/sweep-keymap.yaml
+	keymap draw ./assets/sweep-keymap.yaml >./assets/sweep-keymap.svg
 
 install-keymap:
 	virtualenv venv
@@ -10,3 +8,7 @@ install-keymap:
 
 pipx-keymap:
 	pipx install keymap-drawer
+
+draw-reviung34:
+	keymap parse -z config/reviung34.keymap > ./assets/reviung34-keymap.yaml
+	keymap draw ./assets/reviung34-keymap.yaml >./assets/reviung34-keymap.svg
