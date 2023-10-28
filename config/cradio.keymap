@@ -25,22 +25,21 @@
 };
 
 
-// Home row mods macro
-#define HRML(k1,k2,k3,k4,k5) &ht LCTRL k1 &lt 2     k2  &ht LGUI k3  &ht LSHFT k4 &kp       k5
-#define HRMR(k1,k2,k3,k4,k5) &kp       k1 &ht RSHFT k2  &ht RGUI k3  &lt 2     k4 &ht RCTRL k5
+#define L1(k1) &lt 1 k1
+#define L2(k1) &lt 2 k1
+#define L3(k1) &lt 3 k1
 
-#define RGB(k1) &rgb_ug k1
-#define LT1(k1) &lt 1 k1
-#define LT2(k1) &lt 2 k1
-#define LT3(k1) &lt 3 k1
-
-// Alt tap and hold
+// Alt when hold,k1 when tap
 #define LAT(k1) &ht LALT k1
-#define RAT(k1) &ht RALT k1
-
 // GUI when hold, k1 when tap
 #define LGT(k1) &ht LGUI k1
-#define RGT(k1) &ht RGUI k1
+// shift when hold, k1 when tap
+#define ST(k1) &ht LSHFT k1
+// Ctrl when hold, k1 when tap
+#define CT(k1) &ht LCTRL k1
+// rgb
+#define UG(k1) &rgb_ug k1
+
 // hold preferred makes it easier to trigger hold
 #define HOLD_PREFER_GUI(k1) &hp LGUI k1
 
@@ -48,6 +47,8 @@
 #define HG(k1) &kp LG(k1)
 
 #define BT(k1) &bt BT_SEL k1
+
+#define ENTER &hp LGUI RET
 
 //               == layout and key index ==
 // +----+----+----+----+----+---+----+----+----+----+----+
@@ -140,14 +141,14 @@
         base {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp  Q    &kp W     &kp E     &kp R     &ht LALT T/*  */&ht LALT Y &kp U     &kp I     &kp O     &kp P
+   &kp  Q    &kp W     &kp E     &kp R     LAT(T)    /*  */ LAT(Y)    &kp U     &kp I     &kp O     &kp P
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   HRML(A,       S,        D,        F,        G)    /*  */ HRMR(H,       J,        K,        L,        SEMI)
+   CT(A)     L2(S)     LGT(D)    ST(F)     &kp G     /*  */ &kp H     ST(J)     LGT(K)    L2(L)     CT(SEMI)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-    LT3(Z)   &kp X     &kp C     &kp V     &kp B     /*  */ &kp  N    &kp M     &kp COMMA &kp DOT   LT3(FSLH)
+   L3(Z)     &kp X     &kp C     &kp V     &kp B     /*  */ &kp N     &kp M     &kp COMMA &kp DOT   L3(FSLH)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-                     HOLD_PREFER_GUI(RET)  LT2(SPACE)/*  */ LT1(BSPC) RGT(TAB)
-                   //========================================================================
+                                 ENTER     L2(SPACE) /*  */ L1(BSPC)  LGT(TAB)
+                              //================================================
             >;
         };
 
@@ -181,13 +182,13 @@
 
         config {
             bindings = <
-//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
-   &none      &kp UP   &none     &none  BT(0)  /*  */ &none        &none     &none     RGB(RGB_EFF)  RGB(RGB_TOG)
-//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
-   &kp LEFT   &kp DOWN &kp RIGHT &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none         RGB(RGB_BRI)
-//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
-   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &none         RGB(RGB_BRD)
-//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-------------+------------+
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
+   &none      &kp UP   &none     &none  BT(0)  /*  */ &none        &none     &none     UG(RGB_EFF) UG(RGB_TOG)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
+   &kp LEFT   &kp DOWN &kp RIGHT &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none       UG(RGB_BRI)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
+   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &none       UG(RGB_BRD)
+//+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
                                  &to 0  &trans /*  */ &trans       &trans
                               //================================================
             >;
