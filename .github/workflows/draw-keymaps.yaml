@@ -1,4 +1,4 @@
-name: Draw ZMK keymaps
+name: render keymaps
 
 on:
   workflow_dispatch: # can be triggered manually
@@ -11,21 +11,21 @@ on:
       - "config/boards/*/*/*.keymap"
 
 jobs:
-  draw:
+  render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-      - name: Build keymap image
+      - name: keymap images
         shell: bash
         run: |
           make pipx-keymap
           make draw-sweep
           make draw-reviung34
           make draw-reviung5
-      - name: Commit updated images
+      - name: git commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "ci(keymap): draw keymap in svg"
