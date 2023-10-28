@@ -17,10 +17,10 @@ layers:
   - {t: F, h: LSHFT}
   - G
   - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RGUI}
+  - {t: J, h: LSHFT}
+  - {t: K, h: LGUI}
   - {t: L, h: numbers}
-  - {t: ;, h: RCTRL}
+  - {t: ;, h: LCTRL}
   - {t: Z, h: config}
   - X
   - C
@@ -34,7 +34,7 @@ layers:
   - {t: RET, h: LGUI}
   - {t: SPACE, h: numbers}
   - {t: BSPC, h: symbols}
-  - {t: TAB, h: RGUI}
+  - {t: TAB, h: LGUI}
   symbols:
   - '!'
   - '@'
