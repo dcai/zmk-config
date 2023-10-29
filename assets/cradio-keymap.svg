@@ -260,9 +260,9 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
-<text x="112" y="37" class="combo tap">LGUI</text>
-<text x="112" y="48" class="combo hold">sticky</text>
+<rect rx="6" ry="6" x="238" y="123" width="28" height="26" class="combo"/>
+<text x="252" y="136" class="combo tap">LGUI</text>
+<text x="252" y="147" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
@@ -440,9 +440,9 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
-<text x="112" y="37" class="combo tap">LGUI</text>
-<text x="112" y="48" class="combo hold">sticky</text>
+<rect rx="6" ry="6" x="238" y="123" width="28" height="26" class="combo"/>
+<text x="252" y="136" class="combo tap">LGUI</text>
+<text x="252" y="147" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
@@ -622,9 +622,9 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
-<text x="112" y="37" class="combo tap">LGUI</text>
-<text x="112" y="48" class="combo hold">sticky</text>
+<rect rx="6" ry="6" x="238" y="123" width="28" height="26" class="combo"/>
+<text x="252" y="136" class="combo tap">LGUI</text>
+<text x="252" y="147" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
@@ -803,9 +803,9 @@ path.combo {
 <text x="56" y="63" class="combo tap">ESC</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="24" width="28" height="26" class="combo"/>
-<text x="112" y="37" class="combo tap">LGUI</text>
-<text x="112" y="48" class="combo hold">sticky</text>
+<rect rx="6" ry="6" x="238" y="123" width="28" height="26" class="combo"/>
+<text x="252" y="136" class="combo tap">LGUI</text>
+<text x="252" y="147" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="210" y="35" width="28" height="26" class="combo"/>
