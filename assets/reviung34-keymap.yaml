@@ -5,8 +5,8 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: LALT}
-  - {t: Y, h: LALT}
+  - T
+  - Y
   - U
   - I
   - O
@@ -34,7 +34,7 @@ layers:
   - {t: RET, h: LGUI}
   - {t: SPACE, h: numbers}
   - {t: BSPC, h: symbols}
-  - {t: TAB, h: LGUI}
+  - {t: TAB, h: LALT}
   symbols:
   - '!'
   - '@'
