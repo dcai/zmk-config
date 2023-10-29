@@ -1,10 +1,13 @@
+all: draw-sweep draw-reviung34 draw-reviung5
+
 draw-sweep:
 	keymap parse -z config/cradio.keymap > ./assets/sweep-keymap.yaml
 	keymap draw ./assets/sweep-keymap.yaml >./assets/sweep-keymap.svg
 
-install-keymap:
-	virtualenv venv
-	pip3 install keymap-drawer --upgrade
+install:
+	test -d venv || python3 -m venv ./venv
+	. ./venv/bin/activate
+	pip3 install -Ur requirements.txt
 
 pipx-keymap:
 	pipx install keymap-drawer
