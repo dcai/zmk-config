@@ -71,7 +71,7 @@
         };
         combo_sticky_gui {
             bindings = <&sk LGUI>;
-            key-positions = <1 2>;
+            key-positions = <14 24>;
         };
         combo_bspc {
             bindings = <&kp BACKSPACE>;
