@@ -106,8 +106,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   config:
+  - BT CLR
   - ''
-  - UP
   - ''
   - ''
   - {t: BT, h: '0'}
@@ -116,9 +116,9 @@ layers:
   - ''
   - RGB EFF
   - RGB TOG
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ''
+  - '&bootloader'
+  - ''
   - ''
   - {t: BT, h: '1'}
   - OUT USB
