@@ -45,10 +45,13 @@
 
 // Hold GUI + x key press
 #define HG(k1) &kp LG(k1)
+#define ENTER &hp LGUI RET
 
 #define BT(k1) &bt BT_SEL k1
+#define BTC &bt BT_CLR
 
-#define ENTER &hp LGUI RET
+#define BOOT &bootloader
+
 //     == layout and key index ==
 //
 // +--+--+--+--+--+  +--+--+--+--+--+
@@ -183,11 +186,11 @@
         config {
             bindings = <
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
-   &none      &kp UP   &none     &none  BT(0)  /*  */ &none        &none     &none     UG(RGB_EFF) UG(RGB_TOG)
+   BTC       &none     &none     &none  BT(0)  /*  */ &none        &none     &none     UG(RGB_EFF) UG(RGB_TOG)
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
-   &kp LEFT   &kp DOWN &kp RIGHT &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none       UG(RGB_BRI)
+   &none     BOOT      &none     &none  BT(1)  /*  */ &out OUT_USB &none     &none     &none       UG(RGB_BRI)
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
-   &none      &none    &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &none       UG(RGB_BRD)
+   &none     &none     &none     &none  BT(2)  /*  */ &out OUT_BLE &none     &none     &none       UG(RGB_BRD)
 //+---------+---------+---------+------+------+/*  */+------------+---------+---------+-----------+-----------+
                                  &to 0  &trans /*  */ &trans       &trans
                               //================================================
