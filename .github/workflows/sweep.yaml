@@ -6,8 +6,8 @@ on:
       - main
     paths:
       - "**sweep.yaml"
-      - "**cradio.keymap"
-      - "**cradio.conf"
+      - "**cradio.*"
+      - "**34.dtsi"
   pull_request:
   workflow_dispatch:
 

@@ -7,4 +7,4 @@
               ╰────────┴────────╯
 */
 
-#include "cradio.keymap"
+#include "34.dtsi"

@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "**reviung34.*"
-      - "**cradio.keymap"
+      - "**34.dtsi"
   pull_request:
   workflow_dispatch:
 
