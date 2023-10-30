@@ -4,10 +4,10 @@ layers:
   - Q
   - W
   - E
-  - R
+  - {t: R, h: LALT}
   - T
   - Y
-  - U
+  - {t: U, h: LALT}
   - I
   - O
   - P
