@@ -4,10 +4,10 @@ layers:
   - Q
   - W
   - E
-  - {t: R, h: LALT}
+  - R
   - T
   - Y
-  - {t: U, h: LALT}
+  - U
   - I
   - O
   - P
@@ -24,7 +24,7 @@ layers:
   - {t: Z, h: config}
   - X
   - C
-  - V
+  - {t: V, h: LALT}
   - B
   - N
   - M
