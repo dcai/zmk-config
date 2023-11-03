@@ -26,8 +26,12 @@
 
 
 #define L1(k1) &lt 1 k1
+#define SYM(k1) &lt 1 k1
 #define L2(k1) &lt 2 k1
+#define NAV(k1) &lt 2 k1
+#define NUM(k1) &lt 2 k1
 #define L3(k1) &lt 3 k1
+#define CFG(k1) &lt 3 k1
 
 // Alt when hold,k1 when tap
 #define LAT(k1) &ht LALT k1
@@ -143,11 +147,11 @@
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    LAT(Q)    &kp W     &kp E     &kp R     &kp T     /*  */ &kp Y     &kp U     &kp I     &kp O     &kp P
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   CT(A)     L2(S)     &kp D     ST(F)     &kp G     /*  */ &kp H     ST(J)     &kp K     &kp L     CT(SEMI)
+   CT(A)     NAV(S)    &kp D     ST(F)     &kp G     /*  */ &kp H     ST(J)     &kp K     &kp L     CT(SEMI)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   L3(Z)     LGT(X)    &kp C     &kp V     &kp B     /*  */ &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
+   CFG(Z)    LGT(X)    &kp C     &kp V     &kp B     /*  */ &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-                                 ENTER     L2(SPACE) /*  */ L1(BSPC)  LAT(TAB)
+                                 ENTER     NUM(SPACE)/*  */ SYM(BSPC) LAT(TAB)
                               //================================================
             >;
         };
