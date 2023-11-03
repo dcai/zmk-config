@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: ferris/sweep}
 layers:
   base:
-  - Q
+  - {t: Q, h: LALT}
   - W
   - E
   - R
@@ -13,24 +13,24 @@ layers:
   - P
   - {t: A, h: LCTRL}
   - {t: S, h: numbers}
-  - {t: D, h: LGUI}
+  - D
   - {t: F, h: LSHFT}
   - G
   - H
   - {t: J, h: LSHFT}
-  - {t: K, h: LGUI}
-  - {t: L, h: numbers}
+  - K
+  - L
   - {t: ;, h: LCTRL}
   - {t: Z, h: config}
-  - X
+  - {t: X, h: LGUI}
   - C
-  - {t: V, h: LALT}
+  - V
   - B
   - N
   - M
   - ','
   - .
-  - {t: /, h: config}
+  - /
   - {t: RET, h: LGUI}
   - {t: SPACE, h: numbers}
   - {t: BSPC, h: symbols}
