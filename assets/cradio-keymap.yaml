@@ -137,7 +137,7 @@ layers:
   - ''
   - RGB BRD
   - base
-  - {t: ▽, type: trans}
+  - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
