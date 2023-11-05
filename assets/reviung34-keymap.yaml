@@ -19,7 +19,7 @@ layers:
   - H
   - {t: J, h: LSHFT}
   - K
-  - L
+  - {t: L, h: numbers}
   - {t: ;, h: LCTRL}
   - {t: Z, h: config}
   - {t: X, h: LGUI}
