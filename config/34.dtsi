@@ -67,7 +67,16 @@
 / {
     combos {
         compatible = "zmk,combos";
-
+        lock {
+            timeout-ms = <50>;
+            key-positions = <0 9 20 29>;
+            bindings = <&to 4>;
+        };
+        unlock {
+            timeout-ms = <50>;
+            key-positions = <1 8 21 28>;
+            bindings = <&to 0>;
+        };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
@@ -195,6 +204,15 @@
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
                                  &to 0  &kp PSCRN /*  */ &trans       &trans
                               //================================================
+            >;
+        };
+
+        blank {
+            bindings = <
+&none &none &none &none &none /* */ &none &none &none &none &none
+&none &none &none &none &none /* */ &none &none &none &none &none
+&none &none &none &none &none /* */ &none &none &none &none &none
+                  &none &none /* */ &none &none
             >;
         };
     };
