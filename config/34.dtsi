@@ -170,7 +170,7 @@
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT /*  */ &kp CARET &kp AMPS  &kp STAR  &none     &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp MINUS &kp UNDER &kp GRAVE &kp SQT   &kp DQT   /*  */ &kp COLON &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT
+   &kp DQT   &kp UNDER &kp GRAVE &kp SQT   &kp MINUS /*  */ &kp COLON &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    &kp BSLH  &kp PIPE  &kp TILDE &kp EQUAL &kp PLUS  /*  */ &kp LBRC  &kp RBRC  &kp LT    &kp GT    &kp QMARK
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
@@ -182,11 +182,11 @@
         numbers {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N1    &kp N2    &kp N3    &kp MINUS &kp STAR  /*  */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
+   &kp N1    &kp N2    &kp N3    &kp SLASH &kp STAR  /*  */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N4    &kp N5    &kp N6    &kp PLUS  &kp SLASH /*  */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+   &kp N4    &kp N5    &kp N6    &kp DOT   &kp MINUS /*  */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N7    &kp N8    &kp N9    &kp N0    &kp DOT   /*  */ &none     HG(DOWN)  HG(UP)    &none     &none
+   &kp N7    &kp N8    &kp N9    &kp N0    &kp PLUS  /*  */ &none     HG(DOWN)  HG(UP)    &none     &none
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
                                  &trans    &trans    /*  */ &trans    &trans
                               //================================================
