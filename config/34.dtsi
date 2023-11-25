@@ -168,7 +168,7 @@
         symbols {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT /*  */ &kp CARET &kp AMPS  &kp STAR  &none     &none
+   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT /*  */ &kp CARET &kp AMPS  &kp STAR  &none     &kp N0
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    &kp DQT   &kp UNDER &kp GRAVE &kp SQT   &kp MINUS /*  */ &kp COLON &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
