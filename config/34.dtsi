@@ -67,28 +67,36 @@
 / {
     combos {
         compatible = "zmk,combos";
-        lock {
-            timeout-ms = <50>;
-            key-positions = <0 9 20 29>;
-            bindings = <&to 4>;
-        };
-        unlock {
-            timeout-ms = <50>;
-            key-positions = <1 8 21 28>;
-            bindings = <&to 0>;
-        };
+        /* lock { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <0 9 20 29>; */
+        /*     bindings = <&to 4>; */
+        /* }; */
+        /* unlock { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <1 8 21 28>; */
+        /*     bindings = <&to 0>; */
+        /* }; */
+        /* combo_sticky_gui { */
+        /*     bindings = <&sk LGUI>; */
+        /*     key-positions = <14 24>; */
+        /* }; */
+        /* combo_bspc { */
+        /*     bindings = <&kp BACKSPACE>; */
+        /*     key-positions = <3 4>; */
+        /* }; */
+        /* combo_sticky_ctrl_shift { */
+        /*     bindings = <&sk LC(LSHFT)>; */
+        /*     key-positions = <10 20>; */
+        /* }; */
+        /* combo_layer_3 { */
+        /*     bindings = <&to 3>; */
+        /*     key-positions = <0 9>; */
+        /* }; */
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        };
-        combo_sticky_gui {
-            bindings = <&sk LGUI>;
-            key-positions = <14 24>;
-        };
-        combo_bspc {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <3 4>;
         };
 
         combo_vol_down {
@@ -100,18 +108,9 @@
             bindings = <&kp C_VOL_UP>;
             key-positions = <27 28>;
         };
-
         combo_caps_word {
             bindings = <&caps_word>;
             key-positions = <13 16>;
-        };
-        combo_sticky_ctrl_shift {
-            bindings = <&sk LC(LSHFT)>;
-            key-positions = <10 20>;
-        };
-        combo_layer_3 {
-            bindings = <&to 3>;
-            key-positions = <0 9>;
         };
     };
 
@@ -154,7 +153,7 @@
         base {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   LAT(Q)    &kp W     &kp E     &kp R     &kp T     /*  */ &kp Y     &kp U     &kp I     &kp O     &kp P
+   &kp Q     &kp W     &kp E     &kp R     LAT(T)    /*  */ &kp Y     &kp U     &kp I     &kp O     &kp P
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
    CT(A)     NAV(S)    &kp D     ST(F)     &kp G     /*  */ &kp H     ST(J)     &kp K     NUM(L)    CT(SEMI)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
