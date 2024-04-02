@@ -1,11 +1,11 @@
 layout: {qmk_keyboard: reviung/reviung34, qmk_layout: LAYOUT_reviung34}
 layers:
   base:
-  - {t: Q, h: LALT}
+  - Q
   - W
   - E
   - R
-  - T
+  - {t: T, h: LALT}
   - Y
   - U
   - I
@@ -136,29 +136,17 @@ layers:
   - ''
   - ''
   - RGB BRD
-  - base
+  - {t: base, h: toggle}
   - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   blank: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
-- p: [0, 9, 20, 29]
-  k: blank
-- p: [1, 8, 21, 28]
-  k: base
 - p: [0, 1]
   k: ESC
-- p: [14, 24]
-  k: {t: LGUI, h: sticky}
-- p: [3, 4]
-  k: BACKSPACE
 - p: [26, 27]
   k: VOL DN
 - p: [27, 28]
   k: VOL UP
 - p: [13, 16]
   k: '&caps_word'
-- p: [10, 20]
-  k: {t: LC(LSHFT), h: sticky}
-- p: [0, 9]
-  k: config

@@ -1,12 +1,12 @@
 layout: {qmk_keyboard: reviung/reviung5}
 layers:
-  BASE:
-  - {t: LEFT, h: BLE}
+  base:
+  - {t: LEFT, h: ble}
   - DOWN
   - UP
   - RIGHT
   - MUTE
-  BLE:
+  ble:
   - {type: held}
   - OUT TOG
   - BT PRV
