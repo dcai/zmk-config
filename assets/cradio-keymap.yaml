@@ -123,7 +123,7 @@ layers:
   - {t: BT, h: '1'}
   - OUT USB
   - ''
-  - ''
+  - EP TOG
   - ''
   - RGB BRI
   - {type: held}
