@@ -9,6 +9,10 @@
     continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
 
+&soft_off {
+    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 // hold-preferred: trigger hold when other key is *pressed*
 //       balanced: trigger hold when other key is *pressed and released*
 
@@ -198,7 +202,7 @@
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
    BTC       &none     &none     &none  BT(0)     /*  */ &none        &none     &none     UG(RGB_EFF) UG(RGB_TOG)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
-   &none     BOOT      &soft_off &none  BT(1)     /*  */ &out OUT_USB &none     EP        &none       UG(RGB_BRI)
+   &none     BOOT      &soft_off &none  BT(1)     /*  */ &out OUT_USB &none     &none     &none       UG(RGB_BRI)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
    &none     &none     &none     &none  BT(2)     /*  */ &out OUT_BLE &none     &none     &none       UG(RGB_BRD)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
