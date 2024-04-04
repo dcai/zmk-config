@@ -57,7 +57,6 @@
 
 #define BT(k1) &bt BT_SEL k1
 #define BTC &bt BT_CLR_ALL
-#define EP  &ext_power EP_TOG
 
 #define BOOT &bootloader
 
@@ -202,7 +201,7 @@
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
    BTC       &none     &none     &none  BT(0)     /*  */ &none        &none     &none     UG(RGB_EFF) UG(RGB_TOG)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
-   &none     BOOT      &soft_off &none  BT(1)     /*  */ &out OUT_USB &none     &none     &none       UG(RGB_BRI)
+   &none     BOOT      &soft_off &none  BT(1)     /*  */ &out OUT_USB &none &ext_power EP_TOG  &none  UG(RGB_BRI)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
    &none     &none     &none     &none  BT(2)     /*  */ &out OUT_BLE &none     &none     &none       UG(RGB_BRD)
 //+---------+---------+---------+------+---------+/*  */+------------+---------+---------+-----------+-----------+
