@@ -82,6 +82,10 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.layer-activator {
+    text-decoration: underline;
+}
+
 /* styling for hold/shifted label text in combo box */
 text.combo.hold, text.combo.shifted {
     font-size: 8px;
@@ -113,7 +117,7 @@ path.combo {
 /* End Tabler Icons Cleanup */
 </style>
 <g transform="translate(30, 0)" class="layer-base">
-<text x="0" y="28" class="label">base:</text>
+<text x="0" y="28" class="label" id="base">base:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -164,8 +168,9 @@ path.combo {
 <g transform="translate(84, 84)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">S</text>
-<text x="0" y="24" class="key hold">numbers</text>
-</g>
+<a href="#numbers">
+<text x="0" y="24" class="key hold layer-activator">numbers</text>
+</a></g>
 <g transform="translate(140, 84)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">D</text>
@@ -195,8 +200,9 @@ path.combo {
 <g transform="translate(532, 84)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">L</text>
-<text x="0" y="24" class="key hold">numbers</text>
-</g>
+<a href="#numbers">
+<text x="0" y="24" class="key hold layer-activator">numbers</text>
+</a></g>
 <g transform="translate(588, 84)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">;</text>
@@ -205,8 +211,9 @@ path.combo {
 <g transform="translate(28, 140)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Z</text>
-<text x="0" y="24" class="key hold">config</text>
-</g>
+<a href="#config">
+<text x="0" y="24" class="key hold layer-activator">config</text>
+</a></g>
 <g transform="translate(84, 140)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">X</text>
@@ -252,13 +259,15 @@ path.combo {
 <g transform="translate(196, 196)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="24" class="key hold">numbers</text>
-</g>
+<a href="#numbers">
+<text x="0" y="24" class="key hold layer-activator">numbers</text>
+</a></g>
 <g transform="translate(252, 196)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BSPC</text>
-<text x="0" y="24" class="key hold">symbols</text>
-</g>
+<a href="#symbols">
+<text x="0" y="24" class="key hold layer-activator">symbols</text>
+</a></g>
 <g transform="translate(392, 196)" class="key keypos-33">
 <rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key"/>
 <text x="0" y="0" class="key tap">TAB</text>
@@ -293,7 +302,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(30, 280)" class="layer-symbols">
-<text x="0" y="28" class="label">symbols:</text>
+<text x="0" y="28" class="label" id="symbols">symbols:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -458,7 +467,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(30, 560)" class="layer-numbers">
-<text x="0" y="28" class="label">numbers:</text>
+<text x="0" y="28" class="label" id="numbers">numbers:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -628,7 +637,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(30, 840)" class="layer-config">
-<text x="0" y="28" class="label">config:</text>
+<text x="0" y="28" class="label" id="config">config:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -753,8 +762,9 @@ path.combo {
 </g>
 <g transform="translate(140, 196)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">base</text>
-<text x="0" y="24" class="key hold">toggle</text>
+<a href="#base">
+<text x="0" y="0" class="key tap layer-activator">base</text>
+</a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(196, 196)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -797,7 +807,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(30, 1120)" class="layer-blank">
-<text x="0" y="28" class="label">blank:</text>
+<text x="0" y="28" class="label" id="blank">blank:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
