@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: reviung/reviung34, qmk_layout: LAYOUT_reviung34}
+layout: {qmk_keyboard: reviung/reviung34, layout_name: LAYOUT_reviung34}
 layers:
   base:
   - Q
@@ -80,7 +80,7 @@ layers:
   - PG DN
   - PG UP
   - END
-  - ''
+  - {t: BT, h: '0'}
   - '4'
   - {t: '5', type: held}
   - '6'
@@ -90,7 +90,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - ''
+  - {t: BT, h: '1'}
   - '7'
   - '8'
   - '9'
@@ -100,7 +100,7 @@ layers:
   - Gui+ DOWN
   - Gui+ UP
   - ''
-  - ''
+  - {t: BT, h: '2'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
