@@ -190,11 +190,11 @@
         numbers {
             bindings = <
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N1    &kp N2    &kp N3    &kp SLASH &kp STAR  /*  */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
+   &kp N1    &kp N2    &kp N3    &kp SLASH &kp STAR  /*  */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   BT(0)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N4    &kp N5    &kp N6    &kp DOT   &kp MINUS /*  */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+   &kp N4    &kp N5    &kp N6    &kp DOT   &kp MINUS /*  */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT BT(1)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
-   &kp N7    &kp N8    &kp N9    &kp N0    &kp PLUS  /*  */ &none     HG(DOWN)  HG(UP)    &none     &none
+   &kp N7    &kp N8    &kp N9    &kp N0    &kp PLUS  /*  */ &none     HG(DOWN)  HG(UP)    &none     BT(2)
 //+---------+---------+---------+---------+---------+/*  */+---------+---------+---------+---------+---------+
                                  &trans    &trans    /*  */ &trans    &trans
                               //================================================
