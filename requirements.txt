@@ -1,1 +1,1 @@
-keymap-drawer==0.18
+keymap-drawer==0.19
