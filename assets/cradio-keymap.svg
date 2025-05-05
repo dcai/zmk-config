@@ -67,8 +67,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -82,12 +82,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -183,6 +191,7 @@ path.combo {
 <g transform="translate(252, 108)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">G</text>
+<text x="0" y="24" class="key hold">LGUI</text>
 </g>
 <g transform="translate(420, 108)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -586,9 +595,7 @@ path.combo {
 </g>
 <g transform="translate(532, 140)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Gui+</tspan><tspan x="0" dy="1.2em">UP</tspan>
-</text>
+<text x="0" y="0" class="key tap">Gui+UP</text>
 </g>
 <g transform="translate(588, 158)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

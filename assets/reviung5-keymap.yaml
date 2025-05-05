@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: reviung/reviung5}
+layout: {zmk_keyboard: reviung5}
 layers:
   BASE:
   - {t: LEFT, h: BLE}

@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: reviung/reviung34, layout_name: LAYOUT_reviung34}
+layout: {zmk_keyboard: reviung34}
 layers:
   base:
   - Q
@@ -15,7 +15,7 @@ layers:
   - {t: S, h: numbers}
   - D
   - {t: F, h: LSHFT}
-  - G
+  - {t: G, h: LGUI}
   - H
   - {t: J, h: LSHFT}
   - K
@@ -97,8 +97,8 @@ layers:
   - '0'
   - +
   - ''
-  - Gui+ DOWN
-  - Gui+ UP
+  - Gui+DOWN
+  - Gui+UP
   - ''
   - {t: BT, h: '2'}
   - {t: ▽, type: trans}
