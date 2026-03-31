@@ -154,6 +154,38 @@ Notes:
 - Tracking `main` can break builds when ZMK or Zephyr changes upstream
 - If builds suddenly fail after working before, check whether the repo is following `main`
 
+### ZMK v0.4.0 Upgrade Guide
+
+When `v0.4.0` is released, use this checklist to upgrade safely:
+
+1. Update pinned ZMK version in both places:
+   - `config/west.yml`
+   - `.github/workflows/*.yaml`
+2. Update build matrix board names:
+   - `nice_nano_v2` -> `nice_nano//zmk`
+   - or use the explicit form `nice_nano@2.0.0//zmk`
+3. Re-run all firmware builds:
+   - `build_matrix/reviung34.yaml`
+   - `build_matrix/sweep.yaml`
+   - `build_matrix/reviung5.yaml`
+   - `build_matrix/reset.yaml`
+4. Verify artifacts build successfully for:
+   - Reviung34
+   - Sweep left/right
+   - Reviung5
+   - settings reset
+5. Flash and test at least one board before changing more:
+   - USB
+   - Bluetooth
+   - keymap behavior
+   - sleep/wake
+
+Notes for v0.4.0:
+- The Zephyr 4.1 update changes ZMK board naming
+- `nice_nano_v2` is replaced by `nice_nano//zmk`
+- Shields should not need HWMv2 migration
+- This repo uses in-tree boards/shields, so only build target naming should need changes
+
 ### Build Matrix Format
 
 **Simple format** (sweep, reviung5):
