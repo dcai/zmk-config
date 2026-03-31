@@ -96,7 +96,7 @@ layers:
   - '9'
   - '0'
   - +
-  - ''
+  - LALT
   - Gui+DOWN
   - Gui+UP
   - ''
