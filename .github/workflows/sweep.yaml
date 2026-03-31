@@ -13,7 +13,7 @@ on:
 
 jobs:
   build_sweep:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2.1
     secrets: inherit
     with:
       build_matrix_path: "build_matrix/sweep.yaml"
