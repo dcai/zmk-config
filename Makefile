@@ -1,6 +1,8 @@
 all: draw-cradio draw-reviung34 draw-reviung5
 
 install:
+	which python3
+	python3 -V
 	test -d venv || python3 -m venv ./venv
 	. ./venv/bin/activate
 	pip3 install -Ur requirements.txt
@@ -16,4 +18,3 @@ draw-reviung5:
 
 draw-cradio:
 	@./build.sh cradio
-
