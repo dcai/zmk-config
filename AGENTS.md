@@ -126,6 +126,34 @@ Each keyboard has its own workflow that triggers on:
 
 Builds use ZMK's official `build-user-config.yml` reusable workflow.
 
+### Updating ZMK Version
+
+When changing the ZMK version for this repo, update both of these places together:
+
+1. `config/west.yml`
+   - Update `revision:` for the `zmk` project
+2. `.github/workflows/*.yaml`
+   - Update `zmkfirmware/zmk/.github/workflows/build-user-config.yml@...`
+
+Keep the version aligned in both places.
+
+Example:
+
+```yaml
+# config/west.yml
+revision: v0.2.1
+```
+
+```yaml
+# .github/workflows/reviung34.yaml
+uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2.1
+```
+
+Notes:
+- Pinning to a release is safer than tracking `main`
+- Tracking `main` can break builds when ZMK or Zephyr changes upstream
+- If builds suddenly fail after working before, check whether the repo is following `main`
+
 ### Build Matrix Format
 
 **Simple format** (sweep, reviung5):

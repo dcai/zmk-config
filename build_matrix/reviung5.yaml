@@ -1,5 +1,5 @@
 ---
 board:
-  - nice_nano//zmk
+  - nice_nano_v2
 shield:
   - reviung5
