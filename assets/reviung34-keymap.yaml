@@ -117,13 +117,13 @@ layers:
   - RGB EFF
   - RGB TOG
   - ''
-  - '&bootloader'
-  - '&soft_off'
+  - ''
+  - ''
   - ''
   - {t: BT, h: '1'}
   - OUT USB
   - ''
-  - '&soft_off'
+  - ''
   - ''
   - RGB BRI
   - {type: held}
@@ -136,11 +136,10 @@ layers:
   - ''
   - ''
   - RGB BRD
-  - {t: base, h: toggle}
+  - {t: ▽, type: trans}
   - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  blank: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
 - p: [12, 13]
   k: ESC
