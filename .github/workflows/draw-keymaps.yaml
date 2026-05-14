@@ -7,7 +7,6 @@ on:
       - "config/*.keymap"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
-      - "Makefile"
       - "config/boards/*/*/*.keymap"
 
 jobs:
@@ -15,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.14"
+      - uses: astral-sh/setup-uv@v6
       - name: keymap images
         shell: bash
         run: |
-          make pipx-keymap
-          make
+          uv tool install -r requirements.txt
+          ./build.sh cradio
+          ./build.sh reviung34
+          ./build.sh reviung5
       - name: git commit
         uses: stefanzweifel/git-auto-commit-action@v7
         with:

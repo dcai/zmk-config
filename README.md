@@ -11,7 +11,7 @@
 
 My daily drivers are Reviung34 and Sweep Bling MX, they are both 34 keys, they share the same [zmk keymap file](./config/34.dtsi).
 
-Besides the common `symbols`, `numbers` and `config` layers, there is a blank layer for locking purpose, during transit I could lock keyboard to this layer to avoid triggering key press, unlock (`&to 0`) it via combo when I want to use it.
+Three layers: `symbols`, `numbers`, and `config`.
 
 [Sweep](https://github.com/davidphilipbarr/Sweep/tree/main/Sweep%20Bling%20MX) keymap:
 

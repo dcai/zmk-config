@@ -5,6 +5,7 @@ This is a personal ZMK (Zephyr Mechanical Keyboard) firmware configuration repos
 ## Project Overview
 
 This repo contains keymap configurations and build automation for:
+
 - **Sweep (cradio)** - 34-key split keyboard (daily driver)
 - **Reviung34** - 34-key unibody with RGB underglow
 - **Reviung5** - 5-key macropad
@@ -33,8 +34,7 @@ This repo contains keymap configurations and build automation for:
 │   ├── settings_reset.yaml # CI for reset firmware
 │   └── draw-keymaps.yaml  # Auto-generate keymap SVGs
 ├── assets/                # Generated keymap SVG images
-├── build.sh               # Helper script to generate keymap visuals
-└── Makefile               # Commands for keymap-drawer
+└── build.sh               # Helper script to generate keymap visuals
 ```
 
 ## Keymap Architecture
@@ -44,6 +44,7 @@ This repo contains keymap configurations and build automation for:
 Both Sweep (cradio) and Reviung34 share the same base keymap via `#include "34.dtsi"`. This enables consistent typing experience across both keyboards.
 
 **Layout (3x5 + 2 thumb keys per side):**
+
 ```
   0   1   2   3   4  |  5   6   7   8   9
  10  11  12  13  14  | 15  16  17  18  19
@@ -62,6 +63,7 @@ Both Sweep (cradio) and Reviung34 share the same base keymap via `#include "34.d
 ### Key Behaviors & Macros
 
 Defined macros in `34.dtsi`:
+
 - `L1(k1)` / `SYM(k1)` - Layer tap for symbols
 - `L2(k1)` / `NAV(k1)` / `NUM(k1)` - Layer tap for numbers/navigation
 - `L3(k1)` / `CFG(k1)` - Layer tap for config
@@ -89,6 +91,7 @@ Defined macros in `34.dtsi`:
 ### Sleep & Power Management
 
 Both keyboards use:
+
 - `CONFIG_ZMK_SLEEP=y` - Enable deep sleep
 - `CONFIG_ZMK_IDLE_TIMEOUT=30000` - 30s to idle (backlight off)
 - `CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000` - 30min to deep sleep
@@ -105,21 +108,18 @@ Both keyboards use:
 
 ```bash
 # Install keymap-drawer locally
-make install
-
-# Or install via pipx
-make pipx-keymap
+uv tool install keymap-drawer
 
 # Generate keymap SVGs
-make                    # All keyboards
-make draw-cradio        # Sweep only
-make draw-reviung34     # Reviung34 only
-make draw-reviung5      # Reviung5 only
+./build.sh cradio       # Sweep
+./build.sh reviung34    # Reviung34
+./build.sh reviung5     # Reviung5
 ```
 
 ### GitHub Actions CI
 
 Each keyboard has its own workflow that triggers on:
+
 - Push to main affecting relevant files
 - Pull requests
 - Manual dispatch
@@ -150,6 +150,7 @@ uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2.1
 ```
 
 Notes:
+
 - Pinning to a release is safer than tracking `main`
 - Tracking `main` can break builds when ZMK or Zephyr changes upstream
 - If builds suddenly fail after working before, check whether the repo is following `main`
@@ -181,6 +182,7 @@ When `v0.4.0` is released, use this checklist to upgrade safely:
    - sleep/wake
 
 Notes for v0.4.0:
+
 - The Zephyr 4.1 update changes ZMK board naming
 - `nice_nano_v2` is replaced by `nice_nano//zmk`
 - Shields should not need HWMv2 migration
@@ -189,6 +191,7 @@ Notes for v0.4.0:
 ### Build Matrix Format
 
 **Simple format** (sweep, reviung5):
+
 ```yaml
 board:
   - nice_nano_v2
@@ -198,6 +201,7 @@ shield:
 ```
 
 **Extended format** (reviung34):
+
 ```yaml
 include:
   - shield: reviung34
@@ -210,6 +214,7 @@ include:
 Keymap SVGs are auto-generated using [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and committed to `assets/`.
 
 The `build.sh` script:
+
 1. Parses `.keymap` files to YAML
 2. Renders YAML to SVG
 
@@ -236,6 +241,7 @@ combo_name {
 ### Modify hold-tap timing
 
 Edit behavior timing in `34.dtsi`:
+
 ```dts
 &mt {
     tapping-term-ms = <200>;    // Time to trigger hold
@@ -246,6 +252,7 @@ Edit behavior timing in `34.dtsi`:
 ### Change Bluetooth device name
 
 Edit `config/*.conf`:
+
 ```
 CONFIG_ZMK_KEYBOARD_NAME="New Name"
 ```
