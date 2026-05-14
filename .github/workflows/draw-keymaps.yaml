@@ -18,7 +18,7 @@ jobs:
       - name: keymap images
         shell: bash
         run: |
-          uv tool install -r requirements.txt
+          uv tool install 'keymap-drawer==0.23'
           ./build.sh cradio
           ./build.sh reviung34
           ./build.sh reviung5
