@@ -16,7 +16,7 @@ layers:
   - D
   - {t: F, h: LSHFT}
   - {t: G, h: LGUI}
-  - H
+  - {t: H, h: LGUI}
   - {t: J, h: LSHFT}
   - K
   - {t: L, h: numbers}
@@ -77,8 +77,8 @@ layers:
   - /
   - '*'
   - HOME
-  - PG DN
   - PG UP
+  - PG DN
   - END
   - {t: BT, h: '0'}
   - '4'
@@ -103,8 +103,8 @@ layers:
   - {t: BT, h: '2'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BSPC
+  - '0'
   config:
   - BT CLR ALL
   - ''
